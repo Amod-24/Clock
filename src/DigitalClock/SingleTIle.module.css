@@ -1,0 +1,73 @@
+:root{
+    --tileColor : rgb(230, 230, 230);
+}
+.tileVerticle{
+    height: 6vmin;
+    width: 1vmin;
+    background-color: var(--tileColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.tileVerticle::before{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    align-items: flex-start;
+    top: -.77vmin;
+    border-bottom: .55vmin solid transparent;
+    border-top: .55vmin solid transparent;
+    border-right: .55vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+    rotate: 90deg;
+}
+.tileVerticle::after{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    top: .77vmin;
+    border-bottom: .55vmin solid transparent;
+    border-top: .55vmin solid transparent;
+    border-right: .55vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+    rotate: -90deg;
+}
+.tileHorizontal{
+    height: 1vmin;
+    width: 6vmin;
+    background-color: var(--tileColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.tileHorizontal::before{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    align-items: flex-start;
+    left: -3.25vmin;
+    border-bottom: .55vmin solid transparent;
+    border-top: .55vmin solid transparent;
+    border-right: .55vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+}
+
+.tileHorizontal::after{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    top: -1.03vmin;
+    left: 3.25vmin;
+    border-bottom: .55vmin solid transparent;
+    border-top: .55vmin solid transparent;
+    border-right: .55vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+    rotate: 180deg;
+}

@@ -1,0 +1,84 @@
+.digital{
+    display: flex;
+}
+.digi{
+    height: 30vmin;
+    width: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+}
+.timeBox{
+    height: 25vmin;
+    width: 30vmin;
+    margin: 1vmin;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    height: 5vmin;
+    width: 1vmin;
+    border-top: 1vmin solid var(--tileColor);
+    border-bottom: 1vmin solid var(--tileColor);
+
+}
+.ampm{
+    height:12vmin;
+    width: 20vmin;
+    position: relative;
+    top: 10vmin;
+    left: -12vmin;
+    display: flex;
+    /* background-color: red; */
+}
+.ap{
+    height: 100%;
+    width: 50%;
+    /* background-color: green; */
+}
+.m{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: blue; */
+    
+}
+.verticle{
+    height: 3vmin;
+    width: .5vmin;
+    background-color: var(--tileColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.verticle::before{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    align-items: flex-start;
+    top: -46%;
+    border-bottom: .30vmin solid transparent;
+    border-top: .30vmin solid transparent;
+    border-right: .30vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+    rotate: 90deg;
+}
+.verticle::after{
+    content: "";
+    width: 0vmin;
+    height: 0vmin;
+    position: relative;
+    align-items: flex-start;
+    top: 46%;
+    border-bottom: .30vmin solid transparent;
+    border-top: .30vmin solid transparent;
+    border-right: .30vmin solid var(--tileColor);
+    transform-origin: 50% 50%;
+    rotate: -90deg;
+}
